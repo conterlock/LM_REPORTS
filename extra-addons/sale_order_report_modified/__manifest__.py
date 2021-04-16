@@ -13,6 +13,7 @@
         'views/partner_view_form_ext.xml',
         'views/account_journal_ext.xml',
         'views/sale_order_ext.xml',
+        'data/data_sale_order.xml',
         'security/ir.model.access.csv'
     ],
 }
