@@ -11,5 +11,25 @@
                 </xpath>
             </field>
         </record>
+
+        <record id="view_method_pay_search" model="ir.ui.view">
+            <field name="name">method.pay.search</field>
+            <field name="model">method.pay.sh</field>
+            <field name="arch" type="xml">
+                <search string="Metodos de Pago">
+                    <field name="name" string="Métodos de Pago"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="view_method_pay_tree" model="ir.ui.view">
+            <field name="name">method.pay.tree</field>
+            <field name="model">method.pay.sh</field>
+            <field name="arch" type="xml">
+                <tree string="Métodos de Pago">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
     </data>
 </odoo>

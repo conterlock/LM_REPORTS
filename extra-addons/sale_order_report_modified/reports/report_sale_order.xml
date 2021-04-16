@@ -216,7 +216,7 @@
                             <div style="float: right; width: 50%; text-align: justify;">
                                 <span>Validez de la Oferta:</span><t t-esc="doc.validity_date"/><br/>
                                 <span>Plazo de Pago:</span><t t-esc="doc.payment_term_id.name"/><br/>
-                                <span>Método de Pago:Aqui Va el Método</span><br/>
+                                <span>Método de Pago:</span><t t-esc="doc.method_pay.name"/><br/>
                             </div>
                         </div>
 
