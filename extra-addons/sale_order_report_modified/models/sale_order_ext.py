@@ -9,7 +9,7 @@ import datetime
 class SaleOrderExt(models.Model):
     _inherit = "sale.order"
 
-    method_pay = fields.One2many('method.pay.sh', string="Metodo de Pago")
+    method_pay = fields.Many2one('method.pay.sh', string="Metodo de Pago")
 
     def put_spaces(self):
         param = self.env['ir.config_parameter'].sudo().search([('key', '=', "sh-001")], limit=1)
