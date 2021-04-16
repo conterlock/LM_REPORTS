@@ -1,2 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_model_method_pay_sh_public,model.method.pay.sh,sale_order_report_modified.model_method_pay_sh,base.group_public,1,1,1,1
+access_model_method_pay_sh_public,model.method.pay.sh,sale_order_report_modified.model_method_pay_sh,base.group_user,1,1,1,1
