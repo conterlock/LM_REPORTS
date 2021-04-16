@@ -11,6 +11,7 @@
     'data': [
         'reports/report_sale_order.xml',
         'views/partner_view_form_ext.xml',
-        'views/account_journal_ext.xml'
+        'views/account_journal_ext.xml',
+        'views/sale_order_ext.xml'
     ],
 }
