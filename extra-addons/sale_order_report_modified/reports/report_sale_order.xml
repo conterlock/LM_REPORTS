@@ -17,7 +17,7 @@
                     <t t-set="address">
                         <div t-field="doc.partner_id"
                             t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}' />
-                        <p t-if="doc.partner_id.vat"><t t-esc="doc.company_id.country_id.vat_label or 'Tax ID'"/>: <span t-field="doc.partner_id.vat"/></p>
+                        <p t-if="doc.partner_id.vat"><t t-esc="doc.company_id.country_id.vat_label or 'RUC'"/>: <span t-field="doc.partner_id.vat"/></p>
                     </t>
                     <t t-if="doc.partner_shipping_id == doc.partner_invoice_id
                                          and doc.partner_invoice_id != doc.partner_id
@@ -304,6 +304,7 @@
                         <div name="company_address" class="mb4">
                             <span class="company_address" t-field="company.partner_id"
                                 t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true}'/>
+                            <p t-if="company.vat" class="list-inline-item"><t t-esc="company.country_id.vat_label or 'RUC'"/>: <span t-field="company.vat"/></p>
                         </div>
                     </div>
                 </div>
@@ -322,7 +323,7 @@
                         <li t-if="company.email" class="list-inline-item">Mail: <span t-field="company.email"/></li>
                         <li t-if="company.website" class="list-inline-item">Web: <span t-field="company.website"/></li>
                         <li t-if="company.website" class="list-inline-item">Web: <span t-field="company.website"/></li>
-                        <li t-if="company.vat" class="list-inline-item"><t t-esc="company.country_id.vat_label or 'RUC'"/>: <span t-field="company.vat"/></li>
+                        <!-- <li t-if="company.vat" class="list-inline-item"><t t-esc="company.country_id.vat_label or 'RUC'"/>: <span t-field="company.vat"/></li> -->
                     </ul>
                     <div t-field="company.report_footer"/>
                     <div t-if="report_type == 'pdf'">
