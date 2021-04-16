@@ -19,7 +19,7 @@ class SaleOrderExt(models.Model):
         else:
             num = 30
 
-        return list(range(num-5*len(self.order_line)-len(banks)))
+        return list(range(num-len(self.order_line)-len(banks)))
 
         # if len(self.order_line) < num:
         #     return list(range(num-5*len(self.order_line)-len(banks)))
