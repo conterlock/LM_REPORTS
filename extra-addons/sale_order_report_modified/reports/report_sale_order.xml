@@ -15,9 +15,14 @@
             <t t-call="sale_order_report_modified.external_layout">
                     <t t-set="doc" t-value="doc.with_context(lang=doc.partner_id.lang)" />
                     <t t-set="address">
-                        <div t-field="doc.partner_id"
-                            t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}' />
-                        <p t-if="doc.partner_id.vat"><t t-esc="doc.company_id.country_id.vat_label or 'RUC'"/>: <span t-field="doc.partner_id.vat"/></p>
+                        <!-- <div t-field="doc.partner_id"
+                            t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}' /> -->
+                        <p>
+                            <t t-esc="doc.partner_id.name"/><br/>
+                            <t t-esc="doc.partner_id.street"/><br/>
+                            <t t-esc="doc.partner_id.city"/>, <t t-esc="doc.partner_id.state_id.name"/>, <t t-esc="doc.partner_id.country_id.name"/><br/>
+                            <t t-if="doc.partner_id.vat"><t t-esc="doc.company_id.country_id.vat_label or 'RUC'"/>: <span t-field="doc.partner_id.vat"/></t>
+                        </p>
                     </t>
                     <t t-if="doc.partner_shipping_id == doc.partner_invoice_id
                                          and doc.partner_invoice_id != doc.partner_id
@@ -229,7 +234,7 @@
                                 <hr width="100%" style="background-color:black;border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;"/>
                                 <table class="table table-sm" width="100%" style="border: 0pt">
                                     <t t-foreach="doc.company_id.bank_journal_ids" t-as="bank">
-                                        <tr>
+                                        <tr height="80%">
                                             <td width="35%" style="border: 0pt">
                                                 <t t-esc="bank.bank_id.name"/>
                                             </td>
