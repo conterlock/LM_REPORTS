@@ -302,9 +302,11 @@
                     <div class="col-6 text-right mb4">
                         <h4 class="mt0" t-field="company.report_header"/>
                         <div name="company_address" class="mb4">
-                            <span class="company_address" t-field="company.partner_id"
-                                t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true}'/>
-                            <p><t t-esc="company.address"/></p>
+                            <!-- <span class="company_address" t-field="company.partner_id"
+                                t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true}'/> -->
+                            <p><t t-esc="company.name"/></p><br/>
+                            <p><t t-esc="company.street"/></p><br/>
+                            <p><t t-esc="company.city"/>, <t t-esc="company.state_id.name"/>, <t t-esc="company.country_id.name"/></p><br/>
                             <p t-if="company.vat" class="list-inline-item"><t t-esc="company.country_id.vat_label or 'RUC'"/>: <span t-field="company.vat"/></p>
                         </div>
                     </div>
