@@ -243,9 +243,6 @@
                                                 <t t-if="bank.cci">
                                                   CCI: <t t-esc="bank.cci"/>
                                                 </t>
-                                                <t t-else="">
-                                                  CCI: --
-                                                </t>
                                             </td>
                                         </tr>
                                     </t>
