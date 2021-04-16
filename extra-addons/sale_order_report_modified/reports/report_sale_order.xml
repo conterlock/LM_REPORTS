@@ -206,6 +206,13 @@
                             </div>
                         </div>
 
+                        <t t-foreach="doc.order_line" t-as="line">
+                          <br/><br/>
+                          <br/><br/>
+                          <br/><br/>
+                          <br/><br/>                            
+                        </t>
+
                         <br/><br/>
                         <br/><br/>
                         <br/><br/>
