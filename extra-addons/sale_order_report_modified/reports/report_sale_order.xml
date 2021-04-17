@@ -207,7 +207,7 @@
                         </div>
 
                         <t t-foreach="doc.put_spaces()" t-as="line">
-                          <br/><br/>
+                          <br/>
                         </t>
 
                         <br/><br/>
