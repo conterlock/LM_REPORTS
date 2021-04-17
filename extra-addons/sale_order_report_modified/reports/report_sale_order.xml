@@ -208,7 +208,7 @@
 
                         <t t-foreach="doc.put_spaces()" t-as="line">
                           <br/><br/>
-                          <br/><br/>
+                          <br/>
                         </t>
 
                         <br/><br/>
@@ -222,7 +222,7 @@
                             </div>
                             <div style="float: right; width: 50%; text-align: justify;">
                                 <!-- <span>Validez de la Oferta:</span><t t-esc="doc.validity_date"/><br/> -->
-                                <span>Validez de la Oferta:</span><p class="m-0" t-field="doc.validity_date"/>
+                                <span>Validez de la Oferta:</span><t class="m-0" t-field="doc.validity_date"/>
                                 <span>Plazo de Pago:</span><t t-esc="doc.payment_term_id.name"/><br/>
                                 <span>Método de Pago:</span><t t-esc="doc.method_pay.name"/><br/>
                             </div>
