@@ -19,7 +19,7 @@ class SaleOrderExt(models.Model):
         else:
             num = 19
 
-        return list(range(num-1.5*len(self.order_line)-len(banks)))
+        return list(range(num-int(1.5*len(self.order_line))-len(banks)))
 
     def convert_date_letters(self):
         """this method transforms the date to letters"""
